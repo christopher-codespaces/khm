@@ -15,7 +15,7 @@ function page() {
 
       <main className="min-h-screen bg-[#0B0F14] text-white">
         {(() => {
-          const React = require("react");
+         
           const { motion, useInView } = require("framer-motion");
           const {
             Menu,

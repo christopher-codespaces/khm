@@ -4,6 +4,8 @@ import KhmFooter from "@/components/Footer";
 import KhmBottomNav from "@/components/KhmBottomNav";
 import KhmNavbar from "@/components/NavBar";
 import Head from "next/head";
+import { useState } from "react";
+
 
 
 
@@ -17,7 +19,6 @@ export default function ContactPage() {
 
       <main className="min-h-screen bg-[#0B0F14] text-white">
         {(() => {
-          const React = require("react");
           const { motion, useInView } = require("framer-motion");
           const {
             ChevronLeft,
@@ -197,7 +198,8 @@ export default function ContactPage() {
             );
           }
 
-          const [mode, setMode] = React.useState<Mode>("STANDARD");
+         const [mode, setMode] = useState<Mode>(initialMode);
+
           const data = contentByMode[mode];
 
           return (
