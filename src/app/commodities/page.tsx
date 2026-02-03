@@ -3,7 +3,7 @@ import KhmFooter from "@/components/Footer";
 import KhmBottomNav from "@/components/KhmBottomNav";
 import KhmNavbar from "@/components/NavBar";
 import Head from "next/head";
-import React from "react";
+import React, { useRef } from "react";
 
 function page() {
   return (
@@ -43,7 +43,7 @@ function page() {
             className?: string;
             delay?: number;
           }) {
-            const ref = React.useRef(null);
+const ref = useRef(null);
             const inView = useInView(ref, { once: true, margin: "-10% 0px" });
 
             return (

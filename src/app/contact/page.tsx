@@ -4,6 +4,7 @@ import KhmFooter from "@/components/Footer";
 import KhmBottomNav from "@/components/KhmBottomNav";
 import KhmNavbar from "@/components/NavBar";
 import Head from "next/head";
+import { useRef } from "react";
 
 
 
@@ -36,7 +37,7 @@ export default function ContactPage() {
             children: any;
             delay?: number;
           }) {
-            const ref = React.useRef(null);
+const ref = useRef(null);
             const inView = useInView(ref, { once: true, margin: "-10% 0px" });
 
             return (

@@ -3,6 +3,8 @@
 import KhmFooter from "@/components/Footer";
 import KhmBottomNav from "@/components/KhmBottomNav";
 import KhmNavbar from "@/components/NavBar";
+import { useRef } from "react";
+
 
 
 
@@ -39,7 +41,7 @@ export default function Home() {
             className?: string;
             delay?: number;
           }) {
-            const ref = React.useRef(null);
+const ref = useRef(null);
             const inView = useInView(ref, { once: true, margin: "-12% 0px" });
 
             return (
