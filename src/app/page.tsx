@@ -270,6 +270,28 @@ const ref = useRef(null);
                             </div>
                           </div>
                         </MotionBlock>
+                        <MotionBlock delay={0.18}>
+                          <div className="rounded-2xl border border-white/10 bg-[#0E1622]/70 p-4">
+                            <p className="text-xs leading-relaxed text-white/70">
+                              Global Group Agencies supports KHM Minerals through a defined set of
+                              port-side and trade facilitation functions that strengthen the company’s
+                              export capability.
+                            </p>
+                        
+                            <ul className="mt-3 space-y-1 text-xs text-white/70 list-disc pl-5">
+                              <li>Ship agency services</li>
+                              <li>Clearing and forwarding alignment</li>
+                              <li>Port logistics coordination</li>
+                              <li>Export documentation support</li>
+                            </ul>
+                        
+                            <p className="mt-3 text-xs leading-relaxed text-white/70">
+                              GGA’s presence in Richards Bay strengthens KHM Minerals’ export readiness by
+                              supporting efficient coordination between port operations, shipping
+                              agents, and trade documentation processes at a key bulk-commodity gateway.
+                            </p>
+                          </div>
+                        </MotionBlock>
                       </div>
                     </div>
                   </div>
