@@ -56,9 +56,10 @@ export default function KhmBottomNav() {
             {/* Center primary action */}
             <div className="flex flex-col items-center">
               <Link
-                href="#request-quote"
+                href="/contact"
                 aria-label="Primary action"
-                className="relative -mt-7 flex h-[56px] w-[56px] items-center justify-center rounded-full bg-[#C49A6C] text-[#0B111A] shadow-[0_10px_30px_rgba(0,0,0,0.45)] border border-black/10 active:scale-[0.98] transition">
+                className="relative -mt-7 flex h-[56px] w-[56px] items-center justify-center rounded-full bg-[#C49A6C] text-[#0B111A] shadow-[0_10px_30px_rgba(0,0,0,0.45)] border border-black/10 active:scale-[0.98] transition"
+              >
                 <HiPlus size={24} />
               </Link>
               <span className="mt-2 text-[11px] text-white/50">Request Qoute</span>
