@@ -79,7 +79,7 @@ export default function KhmFooter() {
                 <HiClock /> Mon–Fri: 08:00 – 17:00
               </li>
               <li className="flex items-center gap-2">
-                <HiLocationMarker /> Johannesburg, South Africa
+                <HiLocationMarker /> Richards Bay, South Africa
               </li>
             </ul>
 
