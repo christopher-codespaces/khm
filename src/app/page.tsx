@@ -234,7 +234,7 @@ const ref = useRef(null);
                               </div>
                               <div className="min-w-0">
                                 <h3 className="text-sm font-semibold">
-                                  Vuox Resources
+                                  Vuyox Resources
                                 </h3>
                                 <p className="mt-1 text-xs leading-relaxed text-white/70">
                                   Strategic marketing and processing partner
@@ -269,6 +269,76 @@ const ref = useRef(null);
                               </div>
                             </div>
                           </div>
+                        </MotionBlock>
+                      </div>
+                    </div>
+                  </div>
+                </Panel>
+              </section>
+
+              {/* PANEL: Trade & Port Network (GGA Detail) */}
+              <section className="mx-auto max-w-6xl px-5">
+                <Panel className="overflow-hidden">
+                  <div className="relative">
+                    {/* Background texture */}
+                    <div className="absolute inset-0">
+                      <img
+                        src="/partners-grid.png"
+                        alt=""
+                        className="h-full w-full object-cover opacity-40"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-b from-[#0B0F14]/55 via-[#0B0F14]/65 to-[#0B0F14]/85" />
+                    </div>
+              
+                    <div className="relative px-6 py-10">
+                      <MotionBlock>
+                        {/* Section label */}
+                        <div className="text-[10px] tracking-[0.28em] text-[#C49A6C]/80">
+                          TRADE & PORT NETWORK
+                        </div>
+              
+                        {/* Heading */}
+                        <div className="mt-4 flex items-center gap-4">
+                          <div className="flex h-12 w-12 items-center justify-center rounded-full border border-[#C49A6C]/40 bg-white/5 text-[#C49A6C] text-sm font-semibold">
+                            GGA
+                          </div>
+                          <h2 className="text-xl font-semibold tracking-tight">
+                            Global Group Agencies
+                          </h2>
+                        </div>
+                      </MotionBlock>
+              
+                      <div className="mt-6 max-w-3xl space-y-4">
+                        <MotionBlock delay={0.05}>
+                          <p className="text-sm leading-relaxed text-white/75">
+                            Global Group Agencies (GGA) is a long-established trade and
+                            port-side partner with a strong operational footprint in Richards
+                            Bay, South Africa, a key bulk-commodity export gateway.
+                          </p>
+                        </MotionBlock>
+              
+                        <MotionBlock delay={0.1}>
+                          <p className="text-sm leading-relaxed text-white/70">
+                            The partnership with GGA strengthens KHM Minerals’ ability to
+                            operate within complex port environments by providing continuity
+                            between on-site port activity, shipping stakeholders, and
+                            international trade processes. GGA’s proximity to port
+                            infrastructure and familiarity with high-volume export conditions
+                            supports reliable coordination at critical handover points within
+                            the mineral export lifecycle.
+                          </p>
+                        </MotionBlock>
+              
+                        <MotionBlock delay={0.15}>
+                          <p className="text-sm leading-relaxed text-white/70">
+                            Beyond local presence, GGA operates within broader international
+                            trade networks, enabling alignment between regional port
+                            operations and cross-border commercial requirements. This
+                            relationship enhances KHM Minerals’ export readiness by
+                            reinforcing procedural discipline, regulatory awareness, and
+                            practical execution in port-centric trade environments.
+                          </p>
                         </MotionBlock>
                       </div>
                     </div>
