@@ -22,9 +22,11 @@ export default function Home() {
             ShieldCheck,
             HardHat,
             Globe,
+            Anchor,
+            FileText,
           } = require("lucide-react");
 
-            const { Anchor, FileText, Globe2, Ship } = require("lucide-react");
+            
 
           function MotionBlock({
             children,
@@ -401,6 +403,7 @@ const ref = useRef(null);
                     </div>
               
                     <div className="relative px-6 py-10">
+                      {/* Heading */}
                       <MotionBlock>
                         <h2 className="text-xl font-semibold tracking-tight text-[#C49A6C]">
                           Trade &amp; Port Agency Standards
@@ -413,9 +416,13 @@ const ref = useRef(null);
                         </p>
                       </MotionBlock>
               
+                      {/* Standards grid */}
                       <div className="mt-7 grid gap-4 md:grid-cols-2">
                         <MotionBlock delay={0.05}>
-                          <StandardCard title="Port &amp; Ships Agency">
+                          <StandardCard
+                            title="Port & Ships Agency"
+                            icon={<Ship className="h-4 w-4" />}
+                          >
                             <li>Vessel nomination</li>
                             <li>Port call coordination</li>
                             <li>Liaison with port authorities</li>
@@ -423,7 +430,10 @@ const ref = useRef(null);
                         </MotionBlock>
               
                         <MotionBlock delay={0.1}>
-                          <StandardCard title="Clearing &amp; Forwarding Alignment">
+                          <StandardCard
+                            title="Clearing & Forwarding Alignment"
+                            icon={<Globe className="h-4 w-4" />}
+                          >
                             <li>Customs process coordination</li>
                             <li>Cross-border clearance support</li>
                             <li>Regulatory compliance alignment</li>
@@ -431,14 +441,20 @@ const ref = useRef(null);
                         </MotionBlock>
               
                         <MotionBlock delay={0.15}>
-                          <StandardCard title="Export Documentation">
+                          <StandardCard
+                            title="Export Documentation"
+                            icon={<FileText className="h-4 w-4" />}
+                          >
                             <li>Bills of lading coordination</li>
                             <li>Port release documentation</li>
                           </StandardCard>
                         </MotionBlock>
               
                         <MotionBlock delay={0.2}>
-                          <StandardCard title="Trade &amp; Corridor Facilitation">
+                          <StandardCard
+                            title="Trade & Corridor Facilitation"
+                            icon={<Anchor className="h-4 w-4" />}
+                          >
                             <li>Bulk commodity routing</li>
                             <li>Port-to-market coordination</li>
                             <li>Regional trade access</li>
