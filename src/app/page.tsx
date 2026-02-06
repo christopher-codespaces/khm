@@ -374,6 +374,10 @@ const ref = useRef(null);
                 </Panel>
               </section>
 
+              <div className="mx-auto max-w-6xl px-5">
+                <div className="h-8" />
+              </div>
+
               {/* PANEL: Trade & Port Agency Standards */}
               <section className="mx-auto max-w-6xl px-5">
                 <Panel className="overflow-hidden">
