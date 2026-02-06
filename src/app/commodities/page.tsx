@@ -4,6 +4,7 @@ import KhmBottomNav from "@/components/KhmBottomNav";
 import KhmNavbar from "@/components/NavBar";
 import Head from "next/head";
 import React, { useRef } from "react";
+import Link from "next/link";
 
 function page() {
   return (
@@ -201,14 +202,13 @@ const ref = useRef(null);
                   </div>
 
                   <div className="mt-5">
-                    <a
-                      href="#request-quote"
-                      className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#C49A6C] px-5 py-3 text-sm font-semibold text-[#0B0F14] shadow-sm transition hover:opacity-95">
-                      {iconLeft ? (
-                        <span className="text-[#0B0F14]">{iconLeft}</span>
-                      ) : null}
-                      {ctaLabel}
-                    </a>
+                  <Link
+                    href="/contact"
+                    className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#C49A6C] px-5 py-3 text-sm font-semibold text-[#0B0F14] shadow-sm transition hover:opacity-95"
+                  >
+                  {iconLeft ? <span className="text-[#0B0F14]">{iconLeft}</span> : null}
+                  {ctaLabel}
+                  </Link>
                   </div>
                 </div>
               </div>
