@@ -24,6 +24,8 @@ export default function Home() {
             Globe,
           } = require("lucide-react");
 
+            const { Anchor, FileText, Globe2, Ship } = require("lucide-react");
+
           function MotionBlock({
             children,
             className = "",
@@ -69,15 +71,20 @@ const ref = useRef(null);
 
           function StandardCard({
             title,
+            icon,
             children,
           }: {
             title: string;
+            icon: any;
             children: React.ReactNode;
           }) {
             return (
               <div className="rounded-2xl border border-white/10 bg-[#0B0F14]/55 p-5 shadow-[0_18px_45px_rgba(0,0,0,0.35)]">
                 <div className="flex items-center gap-3">
-                  <div className="h-8 w-8 rounded-xl border border-[#C49A6C]/35 bg-white/5" />
+                  <div className="flex h-9 w-9 items-center justify-center rounded-xl border border-[#C49A6C]/35 bg-white/5 text-[#C49A6C]">
+                    {icon}
+                  </div>
+          
                   <h3 className="text-[12px] font-semibold tracking-[0.18em] text-[#C49A6C]">
                     {title.toUpperCase()}
                   </h3>
