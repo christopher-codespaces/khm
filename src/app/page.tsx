@@ -104,7 +104,7 @@ const ref = useRef(null);
 
                     <div className="mt-6">
                       <a
-                        href="#request-quote"
+                        href="/contact"
                         className="inline-flex items-center justify-center rounded-xl bg-[#C49A6C] px-5 py-3 text-sm font-medium text-[#0B0F14] shadow-sm transition hover:opacity-95">
                         REQUEST QUOTE <span className="ml-2">→</span>
                       </a>
@@ -369,7 +369,7 @@ const ref = useRef(null);
                         </p>
                       </div>
                       <a
-                        href="#"
+                        href="/contact"
                         className="inline-flex items-center justify-center rounded-xl bg-[#C49A6C] px-5 py-3 text-sm font-medium text-[#0B0F14] shadow-sm transition hover:opacity-95">
                         REQUEST QUOTE <span className="ml-2">→</span>
                       </a>
