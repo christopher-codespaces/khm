@@ -67,6 +67,29 @@ const ref = useRef(null);
             );
           }
 
+          function StandardCard({
+            title,
+            children,
+          }: {
+            title: string;
+            children: React.ReactNode;
+          }) {
+            return (
+              <div className="rounded-2xl border border-white/10 bg-[#0B0F14]/55 p-5 shadow-[0_18px_45px_rgba(0,0,0,0.35)]">
+                <div className="flex items-center gap-3">
+                  <div className="h-8 w-8 rounded-xl border border-[#C49A6C]/35 bg-white/5" />
+                  <h3 className="text-[12px] font-semibold tracking-[0.18em] text-[#C49A6C]">
+                    {title.toUpperCase()}
+                  </h3>
+                </div>
+          
+                <ul className="mt-4 space-y-2 text-sm text-white/70 list-disc pl-5">
+                  {children}
+                </ul>
+              </div>
+            );
+          }
+
           return (
             <>
               {/* HERO */}
@@ -276,6 +299,11 @@ const ref = useRef(null);
                 </Panel>
               </section>
 
+                {/* gap between panels */}
+              <div className="mx-auto max-w-6xl px-5">
+                <div className="h-8" />
+              </div>
+
               {/* PANEL: Trade & Port Network (GGA Detail) */}
               <section className="mx-auto max-w-6xl px-5">
                 <Panel className="overflow-hidden">
@@ -339,6 +367,71 @@ const ref = useRef(null);
                             reinforcing procedural discipline, regulatory awareness, and
                             practical execution in port-centric trade environments.
                           </p>
+                        </MotionBlock>
+                      </div>
+                    </div>
+                  </div>
+                </Panel>
+              </section>
+
+              {/* PANEL: Trade & Port Agency Standards */}
+              <section className="mx-auto max-w-6xl px-5">
+                <Panel className="overflow-hidden">
+                  <div className="relative">
+                    {/* Background texture */}
+                    <div className="absolute inset-0">
+                      <img
+                        src="/partners-grid.png"
+                        alt=""
+                        className="h-full w-full object-cover opacity-35"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-b from-[#0B0F14]/55 via-[#0B0F14]/70 to-[#0B0F14]/85" />
+                    </div>
+              
+                    <div className="relative px-6 py-10">
+                      <MotionBlock>
+                        <h2 className="text-xl font-semibold tracking-tight text-[#C49A6C]">
+                          Trade &amp; Port Agency Standards
+                        </h2>
+              
+                        <p className="mt-2 max-w-3xl text-sm leading-relaxed text-white/70">
+                          Global Group Agencies operates within structured port, trade, and
+                          regulatory frameworks to support compliant vessel operations, cargo
+                          clearance, and export coordination.
+                        </p>
+                      </MotionBlock>
+              
+                      <div className="mt-7 grid gap-4 md:grid-cols-2">
+                        <MotionBlock delay={0.05}>
+                          <StandardCard title="Port &amp; Ships Agency">
+                            <li>Vessel nomination</li>
+                            <li>Port call coordination</li>
+                            <li>Liaison with port authorities</li>
+                          </StandardCard>
+                        </MotionBlock>
+              
+                        <MotionBlock delay={0.1}>
+                          <StandardCard title="Clearing &amp; Forwarding Alignment">
+                            <li>Customs process coordination</li>
+                            <li>Cross-border clearance support</li>
+                            <li>Regulatory compliance alignment</li>
+                          </StandardCard>
+                        </MotionBlock>
+              
+                        <MotionBlock delay={0.15}>
+                          <StandardCard title="Export Documentation">
+                            <li>Bills of lading coordination</li>
+                            <li>Port release documentation</li>
+                          </StandardCard>
+                        </MotionBlock>
+              
+                        <MotionBlock delay={0.2}>
+                          <StandardCard title="Trade &amp; Corridor Facilitation">
+                            <li>Bulk commodity routing</li>
+                            <li>Port-to-market coordination</li>
+                            <li>Regional trade access</li>
+                          </StandardCard>
                         </MotionBlock>
                       </div>
                     </div>
