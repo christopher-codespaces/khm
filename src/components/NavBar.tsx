@@ -85,7 +85,7 @@ export default function KhmNavbar() {
           <div className="flex items-center gap-3">
             {/* Desktop CTA */}
             <Link
-              href="#request-quote"
+              href="/contact"
               className="hidden md:inline-flex items-center justify-center rounded-xl bg-[#C49A6C] px-4 py-2 text-sm font-semibold text-[#0B111A] hover:opacity-90 transition">
               Request Quote
             </Link>
