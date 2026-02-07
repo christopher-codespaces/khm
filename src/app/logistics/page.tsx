@@ -123,7 +123,7 @@ const contentByMode: Record<
     riskPill: { text: "MODERATE RISK", tone: "moderate" },
     riskText:
       "Weather forecast near the terminal may affect berthing schedules within 48h.",
-    cta: "VIEW MITIGATION PLAN",
+    cta: "VIEW Risk APPROACH",
   },
 
   ACCELERATED: {
@@ -145,7 +145,7 @@ const contentByMode: Record<
     riskPill: { text: "MONITORING", tone: "moderate" },
     riskText:
       "Priority handling has been requested. Timing depends on rail slot confirmation and berth availability. Next review in 12h.",
-    cta: "VIEW STATUS NOTES",
+    cta: "VIEW STATUS CONTEXT",
   },
 
   CONTINGENCY: {
@@ -167,7 +167,7 @@ const contentByMode: Record<
     riskPill: { text: "ELEVATED RISK", tone: "elevated" },
     riskText:
       "Weather-related disruption is possible within 48h. Alternative routing and staging options are being assessed. Update on next review cycle.",
-    cta: "OPEN CONTINGENCY PLAN",
+    cta: "OPEN CONTINGENCY APPROACH",
   },
 };
 
