@@ -334,11 +334,11 @@ const ref = useRef(null);
               <section className="mx-auto max-w-6xl px-5 pb-16">
                 <MotionBlock>
                   <a
-                    href="#"
+                    href="/contact"
                     className="flex items-center justify-center gap-3 rounded-2xl bg-[#C49A6C] px-6 py-5 text-base font-semibold text-[#0B0F14] shadow-sm transition hover:opacity-95"
-                    aria-label="Download Compliance Report">
+                    aria-label="Contact for Compliance Report">
                     <Download className="h-5 w-5" />
-                    Download Compliance Report
+                    Contact for Compliance Report
                   </a>
 
                   <div className="mt-6 text-center text-[10px] tracking-[0.22em] text-white/45">
