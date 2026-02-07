@@ -193,18 +193,6 @@ const ref = useRef(null);
                     <h2 className="mt-2 text-lg font-semibold">
                       Richards Bay, SA
                     </h2>
-                    <p className="mt-2 text-sm leading-relaxed text-white/65">
-                      Sandton City Office Towers
-                      <br />
-                      5th St, Sandton, 2196
-                      <br />
-                      South Africa
-                    </p>
-                    <a
-                      href="#"
-                      className="mt-3 inline-flex items-center gap-1 text-sm text-[#C49A6C] hover:underline">
-                      Get directions <ExternalLink className="h-4 w-4" />
-                    </a>
                   </div>
                 </MotionBlock>
               </section>
