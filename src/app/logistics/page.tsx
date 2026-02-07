@@ -178,12 +178,15 @@ export default function LogisticsPage() {
   const initialMode: Mode = MODES[0];
 
   const [mode, setMode] = useState<Mode>(initialMode);
-  const [showStatusContext, setShowStatusContext] = useState(false);
 
-  // When mode changes, close the dropdown
+  type RiskDrawer = "RISK" | "STATUS" | "CONTINGENCY" | null;
+  const [openDrawer, setOpenDrawer] = useState<RiskDrawer>(null);
+
+  // when mode changes, close the dropdown
   useEffect(() => {
-    setShowStatusContext(false);
+    setOpenDrawer(null);
   }, [mode]);
+
 
   const data = contentByMode[mode];
 
@@ -358,44 +361,85 @@ export default function LogisticsPage() {
                   </div>
                 </div>
 
-                {/* CTA: toggle ONLY when ACCELERATED, otherwise keep normal */}
+                {/* CTA button (mode-specific dropdown) */}
                 <button
                   type="button"
                   onClick={() => {
-                    if (mode === "ACCELERATED") setShowStatusContext((v) => !v);
+                    const key: RiskDrawer =
+                      mode === "STANDARD"
+                        ? "RISK"
+                        : mode === "ACCELERATED"
+                        ? "STATUS"
+                        : "CONTINGENCY";
+                
+                    setOpenDrawer((prev) => (prev === key ? null : key));
                   }}
                   className="mt-5 w-full rounded-xl bg-[#C49A6C] px-5 py-4 text-sm font-semibold text-[#0B0F14]"
                 >
-                  {mode === "ACCELERATED" ? "VIEW STATUS CONTEXT" : data.cta}
+                  {mode === "STANDARD"
+                    ? "VIEW RISK APPROACH"
+                    : mode === "ACCELERATED"
+                    ? "VIEW STATUS CONTEXT"
+                    : "VIEW CONTINGENCY APPROACH"}
                 </button>
                 
-                {/* Dropdown / Expandable static text (ACCELERATED only) */}
+                {/* Dropdown / Expandable static text */}
                 <AnimatePresence initial={false}>
-                  {mode === "ACCELERATED" && showStatusContext && (
+                  {openDrawer && (
                     <motion.div
-                      key="status-context"
-                      initial={{ height: 0, opacity: 0, y: -6 }}
-                      animate={{ height: "auto", opacity: 1, y: 0 }}
-                      exit={{ height: 0, opacity: 0, y: -6 }}
+                      key={openDrawer}
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.25, ease: "easeOut" }}
                       className="overflow-hidden"
                     >
                       <div className="mt-4 rounded-2xl border border-white/10 bg-black/25 p-4">
                         <div className="text-sm font-semibold text-white/90">
-                          Status Context
+                          {openDrawer === "RISK"
+                            ? "Indicative Risk Approach"
+                            : openDrawer === "STATUS"
+                            ? "Status Context"
+                            : "Contingency Approach"}
                         </div>
+                
                         <p className="mt-2 text-sm leading-relaxed text-white/70">
-                          Logistics status indicators reflect indicative stages based on
-                          coordination inputs from logistics partners and service providers.
-                          Progress percentages and labels are illustrative and do not represent
-                          real-time operational control. Final scheduling, handling, and
-                          execution remain subject to confirmation by rail operators, terminal
-                          authorities, and contracted agents.
+                          {openDrawer === "RISK" ? (
+                            <>
+                              KHM Minerals monitors external risk factors through publicly
+                              available advisories and communication with logistics partners.
+                              Potential disruptions are assessed collaboratively with relevant
+                              stakeholders. Any response actions are confirmed through formal
+                              operational channels and remain subject to regulatory and
+                              contractual constraints.
+                            </>
+                          ) : openDrawer === "STATUS" ? (
+                            <>
+                              Logistics status indicators reflect indicative stages based on
+                              coordination inputs from logistics partners and service providers.
+                              Progress percentages and labels are illustrative and do not
+                              represent real-time operational control. Final scheduling,
+                              handling, and execution remain subject to confirmation by rail
+                              operators, terminal authorities, and contracted agents.
+                            </>
+                          ) : (
+                            <>
+                              KHM Minerals’ contingency considerations focus on preparedness
+                              rather than execution. In the event of potential disruption,
+                              coordination centres on route flexibility, documentation readiness,
+                              and alternative staging options in collaboration with logistics
+                              partners and agents. Any contingency actions are subject to
+                              third-party authority, contractual terms, and regulatory approval
+                              and are confirmed through formal operational channels.
+                            </>
+                          )}
                         </p>
                       </div>
                     </motion.div>
                   )}
                 </AnimatePresence>
+
+
 
               </div>
             </Panel>
