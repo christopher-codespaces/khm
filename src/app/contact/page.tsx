@@ -191,7 +191,7 @@ const ref = useRef(null);
                       REGIONAL OFFICE
                     </div>
                     <h2 className="mt-2 text-lg font-semibold">
-                      Johannesburg, SA
+                      Richards Bay, SA
                     </h2>
                     <p className="mt-2 text-sm leading-relaxed text-white/65">
                       Sandton City Office Towers
