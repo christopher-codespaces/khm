@@ -1,14 +1,14 @@
 "use client";
 
 import Head from "next/head";
-import { useRef, useState } from "react";
-import { motion, useInView } from "framer-motion";
+import {useEffect, useRef, useState } from "react";
+import { motion, useInView, AnimatePresence } from "framer-motion";
 import { Train, AlertTriangle, Cloud, Package, Route } from "lucide-react";
 
 import KhmFooter from "@/components/Footer";
 import KhmBottomNav from "@/components/KhmBottomNav";
 import KhmNavbar from "@/components/NavBar";
-import { motion, useInView, AnimatePresence } from "framer-motion";
+
 
 
 type Tone = "moderate" | "elevated";
