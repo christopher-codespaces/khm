@@ -8,6 +8,8 @@ import { Train, AlertTriangle, Cloud, Package, Route } from "lucide-react";
 import KhmFooter from "@/components/Footer";
 import KhmBottomNav from "@/components/KhmBottomNav";
 import KhmNavbar from "@/components/NavBar";
+import { motion, useInView, AnimatePresence } from "framer-motion";
+
 
 type Tone = "moderate" | "elevated";
 
@@ -81,6 +83,7 @@ function ModeTab({
 }
 
 const MODES: Mode[] = ["STANDARD", "ACCELERATED", "CONTINGENCY"];
+
 
 const contentByMode: Record<
   Mode,
@@ -173,12 +176,20 @@ const contentByMode: Record<
 
 export default function LogisticsPage() {
   const initialMode: Mode = MODES[0];
+
   const [mode, setMode] = useState<Mode>(initialMode);
+  const [showStatusContext, setShowStatusContext] = useState(false);
+
+  // When mode changes, close the dropdown
+  useEffect(() => {
+    setShowStatusContext(false);
+  }, [mode]);
 
   const data = contentByMode[mode];
 
   return (
     <>
+
       <Head>
         <title>KHM Minerals | Logistics</title>
         <meta
@@ -347,9 +358,45 @@ export default function LogisticsPage() {
                   </div>
                 </div>
 
-                <button className="mt-5 w-full rounded-xl bg-[#C49A6C] px-5 py-4 text-sm font-semibold text-[#0B0F14]">
-                  {data.cta}
+                {/* CTA: toggle ONLY when ACCELERATED, otherwise keep normal */}
+                <button
+                  type="button"
+                  onClick={() => {
+                    if (mode === "ACCELERATED") setShowStatusContext((v) => !v);
+                  }}
+                  className="mt-5 w-full rounded-xl bg-[#C49A6C] px-5 py-4 text-sm font-semibold text-[#0B0F14]"
+                >
+                  {mode === "ACCELERATED" ? "VIEW STATUS CONTEXT" : data.cta}
                 </button>
+                
+                {/* Dropdown / Expandable static text (ACCELERATED only) */}
+                <AnimatePresence initial={false}>
+                  {mode === "ACCELERATED" && showStatusContext && (
+                    <motion.div
+                      key="status-context"
+                      initial={{ height: 0, opacity: 0, y: -6 }}
+                      animate={{ height: "auto", opacity: 1, y: 0 }}
+                      exit={{ height: 0, opacity: 0, y: -6 }}
+                      transition={{ duration: 0.25, ease: "easeOut" }}
+                      className="overflow-hidden"
+                    >
+                      <div className="mt-4 rounded-2xl border border-white/10 bg-black/25 p-4">
+                        <div className="text-sm font-semibold text-white/90">
+                          Status Context
+                        </div>
+                        <p className="mt-2 text-sm leading-relaxed text-white/70">
+                          Logistics status indicators reflect indicative stages based on
+                          coordination inputs from logistics partners and service providers.
+                          Progress percentages and labels are illustrative and do not represent
+                          real-time operational control. Final scheduling, handling, and
+                          execution remain subject to confirmation by rail operators, terminal
+                          authorities, and contracted agents.
+                        </p>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+
               </div>
             </Panel>
           </MotionBlock>
