@@ -234,7 +234,7 @@ export default function LogisticsPage() {
                 <div className="h-8" />
               </div>
 
-              {/* PANEL: Trade & Port Network (GGA Detail) */}
+              {/* PANEL: Logistics Coordination Partners */}
               <section className="mx-auto max-w-6xl px-5">
                 <Panel className="overflow-hidden">
                   <div className="relative">
@@ -255,7 +255,7 @@ export default function LogisticsPage() {
                         {/* Heading */}
                         <div className="mt-4 flex items-center gap-4">
                           <div className="flex h-12 w-12 items-center justify-center rounded-full border border-[#C49A6C]/40 bg-white/5 text-[#C49A6C] text-sm font-semibold">
-                            GGA
+                            LCP
                           </div>
                           <h2 className="text-xl font-semibold tracking-tight">
                             Logistics Coordination Partners
