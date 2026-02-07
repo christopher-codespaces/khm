@@ -291,13 +291,13 @@ const ref = useRef(null);
                 <div className="mt-4 grid gap-3">
                   {[
                     {
-                      icon: <Scale className="h-5 w-5" />,
+                      {/*icon: <Scale className="h-5 w-5" />,*/}
                       title: "Corporate Governance",
                       sub: "KHM Minerals is committed to transparency, accountability, and ethical business conduct. Governance practices focus on responsible decision-making, regulatory compliance, and appropriate oversight of operational and commercial activities, evolving in line with organisational growth and applicable regulatory requirements.",
                       href: "#",
                     },
                     {
-                      icon: <ClipboardCheck className="h-5 w-5" />,
+                      {/*icon: <ClipboardCheck className="h-5 w-5" />,*/}
                       title: "ESG Reporting",
                       sub: "KHM Minerals recognises the importance of environmental, social, and governance considerations within its operations and business relationships. ESG-related practices are approached in a practical and proportionate manner, informed by regulatory expectations, operational context, and stakeholder engagement. Formal ESG reporting structures may be developed as the company’s operations and disclosure requirements evolve.",
                       href: "#",
@@ -337,7 +337,6 @@ const ref = useRef(null);
                     href="/contact"
                     className="flex items-center justify-center gap-3 rounded-2xl bg-[#C49A6C] px-6 py-5 text-base font-semibold text-[#0B0F14] shadow-sm transition hover:opacity-95"
                     aria-label="Contact for Compliance Report">
-                    <Download className="h-5 w-5" />
                     Contact for Compliance Report
                   </a>
 
