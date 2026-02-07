@@ -229,6 +229,58 @@ export default function LogisticsPage() {
           </Panel>
         </section>
 
+                        {/* gap between panels */}
+              <div className="mx-auto max-w-6xl px-5">
+                <div className="h-8" />
+              </div>
+
+              {/* PANEL: Trade & Port Network (GGA Detail) */}
+              <section className="mx-auto max-w-6xl px-5">
+                <Panel className="overflow-hidden">
+                  <div className="relative">
+                    {/* Background texture */}
+                    <div className="absolute inset-0">
+                      <img
+                        src="/partners-grid.png"
+                        alt=""
+                        className="h-full w-full object-cover opacity-40"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-b from-[#0B0F14]/55 via-[#0B0F14]/65 to-[#0B0F14]/85" />
+                    </div>
+              
+                    <div className="relative px-6 py-10">
+                      <MotionBlock>
+
+                        {/* Heading */}
+                        <div className="mt-4 flex items-center gap-4">
+                          <div className="flex h-12 w-12 items-center justify-center rounded-full border border-[#C49A6C]/40 bg-white/5 text-[#C49A6C] text-sm font-semibold">
+                            GGA
+                          </div>
+                          <h2 className="text-xl font-semibold tracking-tight">
+                            Logistics Coordination Partners
+                          </h2>
+                        </div>
+                      </MotionBlock>
+              
+                      <div className="mt-6 max-w-3xl space-y-4">
+                        <MotionBlock delay={0.05}>
+                          <p className="text-sm leading-relaxed text-white/75">
+                            KHM Minerals works with established logistics and port services providers to support the coordination of export activities. 
+                            In Richards Bay, Global Group Agencies (GGA) provides ship agency support, clearing and forwarding services, and port-side coordination, 
+                            strengthening operational alignment across the export value chain.
+                          </p>
+                        </MotionBlock>
+                      </div>
+                    </div>
+                  </div>
+                </Panel>
+              </section>
+
+              <div className="mx-auto max-w-6xl px-5">
+                <div className="h-8" />
+              </div>
+
         {/* MODE TABS */}
         <section className="mx-auto max-w-6xl px-5 pt-4">
           <div className="flex gap-3 rounded-2xl border border-white/10 bg-white/5 p-2">
