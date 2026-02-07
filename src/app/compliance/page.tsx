@@ -28,7 +28,6 @@ export default function Home() {
             Scale,
             FileText,
             Download,
-            ExternalLink,
             ChevronLeft,
           } = require("lucide-react");
 
@@ -287,44 +286,35 @@ const ref = useRef(null);
                     ETHICAL STANDARDS
                   </div>
                 </MotionBlock>
-
+              
                 <div className="mt-4 grid gap-3">
                   {[
                     {
-                      {/*icon: <Scale className="h-5 w-5" />,*/}
+                      icon: <Scale className="h-5 w-5" />,
                       title: "Corporate Governance",
                       sub: "KHM Minerals is committed to transparency, accountability, and ethical business conduct. Governance practices focus on responsible decision-making, regulatory compliance, and appropriate oversight of operational and commercial activities, evolving in line with organisational growth and applicable regulatory requirements.",
-                  {/*href: "#",*/}
                     },
                     {
-                      {/*icon: <ClipboardCheck className="h-5 w-5" />,*/}
+                      icon: <ClipboardCheck className="h-5 w-5" />,
                       title: "ESG Reporting",
                       sub: "KHM Minerals recognises the importance of environmental, social, and governance considerations within its operations and business relationships. ESG-related practices are approached in a practical and proportionate manner, informed by regulatory expectations, operational context, and stakeholder engagement. Formal ESG reporting structures may be developed as the company’s operations and disclosure requirements evolve.",
-                  {/*href: "#",*/}
                     },
-                  ].map((card: any, idx: number) => (
+                  ].map((card, idx) => (
                     <MotionBlock key={card.title} delay={0.06 * idx}>
-                      <a
-                        href={card.href}
-                        className="group flex items-center justify-between gap-4 rounded-2xl border border-white/10 bg-white px-5 py-5 text-[#0B0F14] shadow-sm transition hover:shadow-md">
-                        <div className="flex items-center gap-3">
-                          <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#F5F5F5] text-[#C49A6C]">
-                            {card.icon}
-                          </div>
-                          <div>
-                            <h2 className="text-sm font-semibold">
-                              {card.title}
-                            </h2>
-                            <p className="mt-1 text-xs text-[#0B0F14]/65">
-                              {card.sub}
-                            </p>
-                          </div>
+                      <div className="flex items-start gap-4 rounded-2xl border border-white/10 bg-white px-5 py-5 text-[#0B0F14] shadow-sm">
+                        {/* Left icon */}
+                        <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#F5F5F5] text-[#C49A6C]">
+                          {card.icon}
                         </div>
-
-                        <div className="flex items-center gap-2 text-[#0B0F14]/45 transition group-hover:text-[#0B0F14]/70">
-                          <ExternalLink className="h-4 w-4" />
+              
+                        {/* Text */}
+                        <div className="min-w-0">
+                          <h2 className="text-sm font-semibold">{card.title}</h2>
+                          <p className="mt-1 text-xs leading-relaxed text-[#0B0F14]/65">
+                            {card.sub}
+                          </p>
                         </div>
-                      </a>
+                      </div>
                     </MotionBlock>
                   ))}
                 </div>
