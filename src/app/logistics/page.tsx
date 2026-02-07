@@ -123,7 +123,7 @@ const contentByMode: Record<
     riskPill: { text: "MODERATE RISK", tone: "moderate" },
     riskText:
       "Weather forecast near the terminal may affect berthing schedules within 48h.",
-    cta: "VIEW Risk APPROACH",
+    cta: "VIEW RISK APPROACH",
   },
 
   ACCELERATED: {
