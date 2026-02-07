@@ -189,9 +189,9 @@ export default function OperationsPage() {
                   reaching Layer 4 stabilization zones.
                 </p>
 
-                <button className="mt-5 w-full rounded-xl border border-white/15 bg-black/30 px-5 py-3 text-sm font-semibold text-white/80 hover:bg-black/40">
+                {/* <button className="mt-5 w-full rounded-xl border border-white/15 bg-black/30 px-5 py-3 text-sm font-semibold text-white/80 hover:bg-black/40">
                   VIEW TECHNICAL METRICS
-                </button>
+                </button> */}
               </div>
             </Panel>
           </MotionBlock>
@@ -228,9 +228,9 @@ export default function OperationsPage() {
                   maintaining maximum capacity.
                 </p>
 
-                <button className="mt-5 w-full rounded-xl border border-white/15 bg-black/30 px-5 py-3 text-sm font-semibold text-white/80 hover:bg-black/40">
+                {/* <button className="mt-5 w-full rounded-xl border border-white/15 bg-black/30 px-5 py-3 text-sm font-semibold text-white/80 hover:bg-black/40">
                   VIEW TECHNICAL METRICS
-                </button>
+                </button> */}
               </div>
             </Panel>
           </MotionBlock>
@@ -262,9 +262,9 @@ export default function OperationsPage() {
                   <Metric label="IMPURITY" value="<0.1%" />
                 </div>
 
-                <button className="mt-5 w-full rounded-xl border border-white/15 bg-black/30 px-5 py-3 text-sm font-semibold text-white/80 hover:bg-black/40">
+                {/*<button className="mt-5 w-full rounded-xl border border-white/15 bg-black/30 px-5 py-3 text-sm font-semibold text-white/80 hover:bg-black/40">
                   VIEW TECHNICAL METRICS
-                </button>
+                </button> */}
               </div>
             </Panel>
           </MotionBlock>
