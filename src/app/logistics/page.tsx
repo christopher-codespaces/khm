@@ -119,7 +119,7 @@ const contentByMode: Record<
     loadLabel: "DAILY LOAD",
     loadValue: "14.5kT",
     partnerNote:
-      "Coordination: GGA (routing & corridor), Vuox Resources (processing visibility).",
+      "Coordination: GGA (routing & corridor), Vuyox Resources (processing visibility).",
     riskPill: { text: "MODERATE RISK", tone: "moderate" },
     riskText:
       "Weather forecast near the terminal may affect berthing schedules within 48h.",
