@@ -62,7 +62,7 @@ export default function KhmBottomNav() {
               >
                 <HiPlus size={24} />
               </Link>
-              <span className="mt-2 text-[11px] text-white/50">Request Qoute</span>
+              <span className="mt-2 text-[11px] text-white/50">Request Quote</span>
             </div>
 
             {/* Logistics */}
