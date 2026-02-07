@@ -339,7 +339,7 @@ const ref = useRef(null);
               </section>
 
               {/* BOTTOM NAV */}
-              <nav className="fixed bottom-0 left-0 right-0 z-30 border-t border-white/10 bg-[#0B0F14]/90 backdrop-blur">
+              {/*<nav className="fixed bottom-0 left-0 right-0 z-30 border-t border-white/10 bg-[#0B0F14]/90 backdrop-blur">
                 <div className="mx-auto grid max-w-6xl grid-cols-4 px-5">
                   <BottomNavItem
                     icon={<Grid3X3 className="h-5 w-5" />}
@@ -363,7 +363,7 @@ const ref = useRef(null);
                     href="#"
                   />
                 </div>
-              </nav>
+              </nav> */}
 
               {/* REQUEST QUOTE anchor */}
               <div id="request-quote" />
