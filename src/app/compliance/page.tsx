@@ -293,13 +293,13 @@ const ref = useRef(null);
                     {
                       icon: <Scale className="h-5 w-5" />,
                       title: "Corporate Governance",
-                      sub: "Transparency and accountability.",
+                      sub: "KHM Minerals is committed to transparency, accountability, and ethical business conduct. Governance practices focus on responsible decision-making, regulatory compliance, and appropriate oversight of operational and commercial activities, evolving in line with organisational growth and applicable regulatory requirements.",
                       href: "#",
                     },
                     {
                       icon: <ClipboardCheck className="h-5 w-5" />,
                       title: "ESG Reporting",
-                      sub: "Environmental impact disclosures.",
+                      sub: "KHM Minerals recognises the importance of environmental, social, and governance considerations within its operations and business relationships. ESG-related practices are approached in a practical and proportionate manner, informed by regulatory expectations, operational context, and stakeholder engagement. Formal ESG reporting structures may be developed as the company’s operations and disclosure requirements evolve.",
                       href: "#",
                     },
                   ].map((card: any, idx: number) => (
