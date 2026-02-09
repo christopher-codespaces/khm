@@ -153,7 +153,7 @@ export default function KhmNavbar() {
 
             <div className="mt-6 rounded-2xl bg-[#0E1622] border border-white/10 p-4">
               <p className="text-xs tracking-[0.2em] text-white/50">CONTACT</p>
-              <p className="mt-2 text-sm text-white/85">Johannesburg, SA</p>
+              <p className="mt-2 text-sm text-white/85">Richards Bay, SA</p>
               <p className="mt-1 text-sm text-white/70">info@khmminerals.com</p>
             </div>
           </div>
