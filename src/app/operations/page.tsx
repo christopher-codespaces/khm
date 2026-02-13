@@ -3,7 +3,7 @@
 import Head from "next/head";
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { Pickaxe, Factory, FlaskConical } from "lucide-react";
+import { Pickaxe, Factory, FlaskConical, Anchor } from "lucide-react";
 
 import KhmFooter from "@/components/Footer";
 import KhmBottomNav from "@/components/KhmBottomNav";
@@ -136,16 +136,19 @@ export default function OperationsPage() {
               <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#0B0F14]/70" />
 
               <div className="absolute left-4 top-4">
-                <StatusPill label="SYSTEM STATUS: OPTIMAL" />
+                {/* Updated Status */}
+                <StatusPill label="SYSTEM STATUS: ACTIVE" />
               </div>
             </div>
 
             <div className="px-5 py-5">
               <h1 className="text-xl font-semibold tracking-tight">
-                North Sector Main Hub
+                {/* Updated Header */}
+                Richards Bay Multi-Purpose Terminal (MPT)
               </h1>
               <p className="mt-1 text-xs tracking-[0.22em] text-white/55">
-                ID: KHM-4409 — OPERATIONAL DASHBOARD V4.2
+                {/* Updated ID */}
+                ID: KHM-RBMPT-PORT-01
               </p>
             </div>
           </Panel>
@@ -162,8 +165,44 @@ export default function OperationsPage() {
             </h2>
           </MotionBlock>
 
-          {/* EXTRACTION */}
+          {/* NEW: Port Handling Capability (From Doc) */}
           <MotionBlock delay={0.05}>
+            <Panel className="mt-6">
+              <div className="px-5 py-6">
+                <PhaseHeader
+                  icon={<Anchor className="h-5 w-5" />}
+                  label="Port Handling Capability"
+                  badge="OPERATIONAL"
+                />
+
+                <div className="mt-4 grid grid-cols-1 gap-2 sm:grid-cols-2">
+                  {[
+                    "Coal – Operational",
+                    "Chrome – Operational",
+                    "Iron Ore – Operational",
+                    "Wood Chips – Operational",
+                    "Steel – Operational",
+                    "Sulphur (Discharge) – Operational",
+                  ].map((item, i) => (
+                    <div
+                      key={i}
+                      className="flex items-center gap-2 rounded-lg border border-white/5 bg-white/5 px-3 py-2 text-sm text-white/80">
+                      <div className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
+                      {item}
+                    </div>
+                  ))}
+                </div>
+
+                <p className="mt-5 text-sm leading-relaxed text-white/70">
+                  {/* Operational Notes from Doc */}
+                  Port-based cargo management aligned with regulated terminal procedures and export logistics coordination.
+                </p>
+              </div>
+            </Panel>
+          </MotionBlock>
+
+          {/* EXISTING: Extraction */}
+          <MotionBlock delay={0.1}>
             <Panel className="mt-6">
               <img
                 src="/extraction-pit.jpg"
@@ -188,16 +227,12 @@ export default function OperationsPage() {
                   Infrastructure status is currently optimal. Primary pit depth
                   reaching Layer 4 stabilization zones.
                 </p>
-
-                {/* <button className="mt-5 w-full rounded-xl border border-white/15 bg-black/30 px-5 py-3 text-sm font-semibold text-white/80 hover:bg-black/40">
-                  VIEW TECHNICAL METRICS
-                </button> */}
               </div>
             </Panel>
           </MotionBlock>
 
-          {/* PROCESSING */}
-          <MotionBlock delay={0.1}>
+          {/* EXISTING: Processing */}
+          <MotionBlock delay={0.15}>
             <Panel className="mt-6">
               <img
                 src="/processing-plant.jpg"
@@ -227,16 +262,12 @@ export default function OperationsPage() {
                   Conveyor systems fully operational. Facility throughput
                   maintaining maximum capacity.
                 </p>
-
-                {/* <button className="mt-5 w-full rounded-xl border border-white/15 bg-black/30 px-5 py-3 text-sm font-semibold text-white/80 hover:bg-black/40">
-                  VIEW TECHNICAL METRICS
-                </button> */}
               </div>
             </Panel>
           </MotionBlock>
 
-          {/* QUALITY CONTROL */}
-          <MotionBlock delay={0.15}>
+          {/* EXISTING: Quality Control (Preserved!) */}
+          <MotionBlock delay={0.2}>
             <Panel className="mt-6">
               <img
                 src="/quality-lab.jpg"
@@ -261,10 +292,6 @@ export default function OperationsPage() {
                   <Metric label="Fe GRADING" value="64.5%" />
                   <Metric label="IMPURITY" value="<0.1%" />
                 </div>
-
-                {/*<button className="mt-5 w-full rounded-xl border border-white/15 bg-black/30 px-5 py-3 text-sm font-semibold text-white/80 hover:bg-black/40">
-                  VIEW TECHNICAL METRICS
-                </button> */}
               </div>
             </Panel>
           </MotionBlock>
