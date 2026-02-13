@@ -16,7 +16,6 @@ function page() {
 
       <main className="min-h-screen bg-[#0B0F14] text-white">
         {(() => {
-         
           const { motion, useInView } = require("framer-motion");
           const {
             Menu,
@@ -44,7 +43,7 @@ function page() {
             className?: string;
             delay?: number;
           }) {
-const ref = useRef(null);
+            const ref = useRef(null);
             const inView = useInView(ref, { once: true, margin: "-10% 0px" });
 
             return (
@@ -202,13 +201,14 @@ const ref = useRef(null);
                   </div>
 
                   <div className="mt-5">
-                  <Link
-                    href="/contact"
-                    className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#C49A6C] px-5 py-3 text-sm font-semibold text-[#0B0F14] shadow-sm transition hover:opacity-95"
-                  >
-                  {iconLeft ? <span className="text-[#0B0F14]">{iconLeft}</span> : null}
-                  {ctaLabel}
-                  </Link>
+                    <Link
+                      href="/contact"
+                      className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#C49A6C] px-5 py-3 text-sm font-semibold text-[#0B0F14] shadow-sm transition hover:opacity-95">
+                      {iconLeft ? (
+                        <span className="text-[#0B0F14]">{iconLeft}</span>
+                      ) : null}
+                      {ctaLabel}
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -243,33 +243,15 @@ const ref = useRef(null);
 
           return (
             <>
-              {/* TAB / SEO HEADERS (App Router suggestion) */}
-              {/*
-          export const metadata = {
-            title: "KHM Commodities | Mineral Catalogue & Availability",
-            description:
-              "Browse KHM Minerals commodity catalogue across metallic and non-metallic categories, with grade indicators, origin notes, and quote requests.",
-          };
-        */}
-
               {/* TOP BAR */}
               <section className="sticky top-0 z-20 border-b border-white/10 bg-[#0B0F14]/85 backdrop-blur">
-                {/* FILTERS */}
-                {/* <div className="mx-auto py-11 max-w-6xl px-5 pb-4">
-                  <div className="flex gap-3 overflow-x-auto pb-1 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-                    <FilterPill label="All Minerals" active />
-                    <FilterPill
-                      label="Metallic"
-                      rightIcon={<ChevronDown className="h-4 w-4" />}
-                    />
-                    <FilterPill label="Non-Metallic" />
-                  </div>
-                </div> */}
+                {/* FILTERS (currently disabled) */}
               </section>
 
               {/* CONTENT */}
               <section className="mx-auto max-w-6xl px-5 pb-24 pt-6">
                 <div className="grid gap-6">
+                  {/* ORIGINAL CARDS */}
                   <MotionBlock>
                     <CommodityCard
                       imageSrc="/commodities-iron-ore.png"
@@ -335,35 +317,170 @@ const ref = useRef(null);
                       iconLeft={<FileText className="h-4 w-4" />}
                     />
                   </MotionBlock>
+
+                  {/* KHM COMMODITY CARDS */}
+
+                  {/* Coal */}
+                  <MotionBlock delay={0.18}>
+                    <CommodityCard
+                      imageSrc="/commodities-coal.jpg"
+                      chip="EXPORT READY"
+                      categoryLabel="METALLIC CATEGORY"
+                      categoryValue="Coal"
+                      rightLabel="CATEGORY"
+                      rightValue="Bulk Commodity"
+                      bullets={[
+                        {
+                          icon: <Truck className="h-4 w-4" />,
+                          text: "Thermal and industrial grade",
+                        },
+                        {
+                          icon: <Truck className="h-4 w-4" />,
+                          text: "Bulk vessel loading compatible",
+                        },
+                        {
+                          icon: <FileText className="h-4 w-4" />,
+                          text: "Export-aligned documentation",
+                        },
+                        {
+                          icon: <FileText className="h-4 w-4" />,
+                          text: "Not specified in source",
+                        },
+                      ]}
+                      ctaLabel="REQUEST QUOTE"
+                      iconLeft={<FileText className="h-4 w-4" />}
+                    />
+                  </MotionBlock>
+
+                  {/* Chrome Ore */}
+                  <MotionBlock delay={0.24}>
+                    <CommodityCard
+                      imageSrc="/commodities-chrome-ore.jpg"
+                      chip="METALLURGICAL"
+                      categoryLabel="METALLIC CATEGORY"
+                      categoryValue="Chrome Ore"
+                      rightLabel="CATEGORY"
+                      rightValue="Ferro Alloy"
+                      bullets={[
+                        {
+                          icon: <Truck className="h-4 w-4" />,
+                          text: "Smelting-grade material",
+                        },
+                        {
+                          icon: <Truck className="h-4 w-4" />,
+                          text: "Export prepared",
+                        },
+                        {
+                          icon: <Truck className="h-4 w-4" />,
+                          text: "Bulk and break-bulk handling",
+                        },
+                        {
+                          icon: <FileText className="h-4 w-4" />,
+                          text: "Not specified in source",
+                        },
+                      ]}
+                      ctaLabel="REQUEST QUOTE"
+                      iconLeft={<FileText className="h-4 w-4" />}
+                    />
+                  </MotionBlock>
+
+                  {/* Gold */}
+                  <MotionBlock delay={0.30}>
+                    <CommodityCard
+                      imageSrc="/commodities-gold.jpg"
+                      chip="TRADE GRADE"
+                      categoryLabel="METALLIC CATEGORY"
+                      categoryValue="Gold"
+                      rightLabel="CATEGORY"
+                      rightValue="Precious Metal"
+                      bullets={[
+                        {
+                          icon: <FileText className="h-4 w-4" />,
+                          text: "Regulatory compliant handling",
+                        },
+                        {
+                          icon: <FileText className="h-4 w-4" />,
+                          text: "Export documentation aligned",
+                        },
+                        {
+                          icon: <Truck className="h-4 w-4" />,
+                          text: "Secure logistics coordination",
+                        },
+                        {
+                          icon: <FileText className="h-4 w-4" />,
+                          text: "Not specified in source",
+                        },
+                      ]}
+                      ctaLabel="REQUEST QUOTE"
+                      iconLeft={<FileText className="h-4 w-4" />}
+                    />
+                  </MotionBlock>
+
+                  {/* Silver */}
+                  <MotionBlock delay={0.36}>
+                    <CommodityCard
+                      imageSrc="/commodities-silver.jpg"
+                      chip="STANDARD"
+                      categoryLabel="METALLIC CATEGORY"
+                      categoryValue="Silver"
+                      rightLabel="CATEGORY"
+                      rightValue="Precious Metal"
+                      bullets={[
+                        {
+                          icon: <FileText className="h-4 w-4" />,
+                          text: "Trade-grade supply",
+                        },
+                        {
+                          icon: <FileText className="h-4 w-4" />,
+                          text: "Export compliant",
+                        },
+                        {
+                          icon: <Truck className="h-4 w-4" />,
+                          text: "Secure handling",
+                        },
+                        {
+                          icon: <FileText className="h-4 w-4" />,
+                          text: "Not specified in source",
+                        },
+                      ]}
+                      ctaLabel="REQUEST QUOTE"
+                      iconLeft={<FileText className="h-4 w-4" />}
+                    />
+                  </MotionBlock>
+
+                  {/* Graphite */}
+                  <MotionBlock delay={0.42}>
+                    <CommodityCard
+                      imageSrc="/commodities-graphite.jpg"
+                      chip="INDUSTRIAL"
+                      categoryLabel="METALLIC CATEGORY"
+                      categoryValue="Graphite"
+                      rightLabel="CATEGORY"
+                      rightValue="Industrial Mineral"
+                      bullets={[
+                        {
+                          icon: <FileText className="h-4 w-4" />,
+                          text: "Manufacturing grade",
+                        },
+                        {
+                          icon: <Zap className="h-4 w-4" />,
+                          text: "Energy and metallurgical use",
+                        },
+                        {
+                          icon: <Truck className="h-4 w-4" />,
+                          text: "Bulk export capable",
+                        },
+                        {
+                          icon: <FileText className="h-4 w-4" />,
+                          text: "Not specified in source",
+                        },
+                      ]}
+                      ctaLabel="REQUEST QUOTE"
+                      iconLeft={<FileText className="h-4 w-4" />}
+                    />
+                  </MotionBlock>
                 </div>
               </section>
-
-              {/* BOTTOM NAV */}
-              {/*<nav className="fixed bottom-0 left-0 right-0 z-30 border-t border-white/10 bg-[#0B0F14]/90 backdrop-blur">
-                <div className="mx-auto grid max-w-6xl grid-cols-4 px-5">
-                  <BottomNavItem
-                    icon={<Grid3X3 className="h-5 w-5" />}
-                    label="CATALOG"
-                    active
-                    href="#"
-                  />
-                  <BottomNavItem
-                    icon={<LineChart className="h-5 w-5" />}
-                    label="MARKET"
-                    href="#"
-                  />
-                  <BottomNavItem
-                    icon={<ClipboardList className="h-5 w-5" />}
-                    label="QUOTES"
-                    href="#"
-                  />
-                  <BottomNavItem
-                    icon={<User className="h-5 w-5" />}
-                    label="PROFILE"
-                    href="#"
-                  />
-                </div>
-              </nav> */}
 
               {/* REQUEST QUOTE anchor */}
               <div id="request-quote" />
